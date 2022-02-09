@@ -27,7 +27,7 @@ $config = [
         ],
         'mongodb' => [
             'class' => '\yii\mongodb\Connection',
-            'dsn' => "mongodb://$USER_MONGO:$PWD_MONGO@$HOST_MONGO:$PORT_MONGO/$DB_MONGO"
+            'dsn' => "mongodb://$USER_MONGO:$PWD_MONGO@$HOST_MONGO:$PORT_MONGO/$DB_MONGO?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@api-tag@"
         ],
         'mysql' => [
             'class' => 'yii\db\Connection',
