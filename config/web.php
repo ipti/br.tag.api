@@ -27,11 +27,7 @@ $config = [
         ],
         'mongodb' => [
             'class' => '\yii\mongodb\Connection',
-            'dsn' => "mongodb://$HOST_MONGO:$PORT_MONGO/$DB_MONGO?authSource=$DB_MONGO",
-            'options' => [
-                "username" => $USER_MONGO,
-                "password" => $PWD_MONGO
-            ]
+            'dsn' => "mongodb://$USER_MONGO:$PWD_MONGO@$HOST_MONGO:$PORT_MONGO/$DB_MONGO"
         ],
         'mysql' => [
             'class' => 'yii\db\Connection',
