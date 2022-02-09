@@ -1,4 +1,8 @@
 <?php
+$HOST_MONGO = getenv("HOST_MONGO_TAG");
+$USER_MONGO = getenv("USER_MONGO_TAG");
+$PWD_MONGO = getenv("PWD_MONGO_TAG");
+$DB_MONGO = getenv("MONGO_TAG");
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
@@ -22,10 +26,10 @@ $config = [
         ],
         'mongodb' => [
             'class' => '\yii\mongodb\Connection',
-            'dsn' => 'mongodb://mongodb-qpnr5.mongodb-qpnr5.svc.cluster.local/council?authSource=council',
+            'dsn' => "mongodb://$HOST_MONGO/$DB_MONGO?authSource=$DB_MONGO",
             'options' => [
-                "username" => "council",
-                "password" => "10*20$30"
+                "username" => $USER_MONGO,
+                "password" => $PWD_MONGO
             ]
         ],
         'mysql' => [
