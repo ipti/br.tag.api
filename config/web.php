@@ -3,6 +3,7 @@ $HOST_MONGO = getenv("HOST_MONGO_TAG");
 $USER_MONGO = getenv("USER_MONGO_TAG");
 $PWD_MONGO = getenv("PWD_MONGO_TAG");
 $DB_MONGO = getenv("MONGO_TAG");
+$PORT_MONGO = getenv("PORT_MONGO_TAG");
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
@@ -26,7 +27,7 @@ $config = [
         ],
         'mongodb' => [
             'class' => '\yii\mongodb\Connection',
-            'dsn' => "mongodb://$HOST_MONGO/$DB_MONGO?authSource=$DB_MONGO",
+            'dsn' => "mongodb://$HOST_MONGO:$PORT_MONGO/$DB_MONGO?authSource=$DB_MONGO",
             'options' => [
                 "username" => $USER_MONGO,
                 "password" => $PWD_MONGO
