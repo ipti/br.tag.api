@@ -1,10 +1,13 @@
 <?php
-
+$HOST = getenv("HOST_DB_TAG");
+$USER = getenv("USER_DB_TAG");
+$PWD = getenv("PWD_DB_TAG");
+$DB = getenv("DB_TAG");
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=mariadb-s6vhx-mariadb.mariadb-s6vhx.svc.cluster.local;dbname=io.escola.cloc',
-    'username' => 'admin',
-    'password' => '123456',
+    'dsn' => "mysql:host=$HOST;dbname=$DB",
+    'username' => $USER,
+    'password' => $PWD,
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
