@@ -27,7 +27,7 @@ $config = [
         ],
         'mongodb' => [
             'class' => '\yii\mongodb\Connection',
-            'dsn' => "mongodb://api-tag:Tq85YyUykssppIUjf2JY8r8TR1jpMgrthQEbD7W7ICzqjuCVW6QTcGsJVc3V6bYxwJAn3dwJwoRQJXGhsYbL7A==@api-tag.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@api-tag@"
+             'dsn' => "mongodb://$USER_MONGO:$PWD_MONGO@$HOST_MONGO:$PORT_MONGO/$DB_MONGO?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@api-tag@"
         ],
         'mysql' => [
             'class' => 'yii\db\Connection',
