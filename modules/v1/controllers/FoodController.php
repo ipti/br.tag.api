@@ -43,7 +43,7 @@ class FoodController extends AuthController
             $query->where($queryCondition);
         }
 
-        $query->orderBy('createAt');
+        //$query->orderBy('createAt');
 
         $foods = [];
         $provider = new ActiveDataProvider([
