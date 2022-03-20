@@ -32,7 +32,7 @@ class FactController extends AuthController
             $query->where($queryCondition);
         }
 
-        $query->orderBy('createAt');
+        //$query->orderBy('createAt');
 
         $facts = [];
         $provider = new ActiveDataProvider([
