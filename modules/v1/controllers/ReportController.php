@@ -32,7 +32,7 @@ class ReportController extends AuthController
             $query->where($queryCondition);
         }
 
-        $query->orderBy('createAt');
+        //$query->orderBy('createAt');
 
         $reports = [];
         $provider = new ActiveDataProvider([
