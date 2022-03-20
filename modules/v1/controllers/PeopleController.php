@@ -169,9 +169,7 @@ class PeopleController extends AuthController
         }
         //@TODO CORRIGIR POSTERIORMENTE O METODO DE FIND E AS CONDIÇÕES..TEMPORARIAMENTE DESABILITADOS
         $query = People::find();
-        $peoples = $query
-                    ->orderBy('name')
-                    ->all();
+        $peoples = $query->all();
 
         foreach($peoples as $key => $people){
             $peoples[$key] = $people->formatData();
