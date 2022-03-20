@@ -32,7 +32,7 @@ class HousingController extends AuthController
             $query->where($queryCondition);
         }
 
-        $query->orderBy('createAt');
+        //$query->orderBy('createAt');
 
         $housings = [];
         $provider = new ActiveDataProvider([
