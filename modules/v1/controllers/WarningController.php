@@ -39,7 +39,7 @@ class WarningController extends AuthController
             $query->where($queryCondition);
         }
 
-        $query->orderBy('createAt');
+        //$query->orderBy('createAt');
 
         $warnings = [];
         $provider = new ActiveDataProvider([
