@@ -31,7 +31,7 @@ class ServiceController extends AuthController
             $query->where($queryCondition);
         }
 
-        $query->orderBy('createAt');
+        //$query->orderBy('createAt');
 
         $services = [];
         $provider = new ActiveDataProvider([
