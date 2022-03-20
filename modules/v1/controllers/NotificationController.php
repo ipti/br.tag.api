@@ -35,7 +35,7 @@ class NotificationController extends AuthController
             $query->where($queryCondition);
         }
 
-        $query->orderBy('notifier');
+        //$query->orderBy('notifier');
 
         $notifications = [];
         $provider = new ActiveDataProvider([
