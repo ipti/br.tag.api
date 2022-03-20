@@ -60,7 +60,7 @@ class UserController extends Controller
                         'email' => $user->email,
                         'access_token' => $token,
                         'institution' => (string) $user->institution_id,
-                        'institution_type' => strtoupper($institution->type),
+                        'institution_type' => 'CONSELHO',
                     ],
                     'message' => 'Login efetuado com sucesso'
                 ];
