@@ -44,7 +44,7 @@ class PeopleController extends AuthController
         
         //@TODO CORRIGIR POSTERIORMENTE O METODO DE FIND E AS CONDIÇÕES..TEMPORARIAMENTE DESABILITADOS
         $query = People::find();
-        $query->orderBy('name');
+        //$query->orderBy('name');
 
         $peoples = [];
         $provider = new ActiveDataProvider([
@@ -55,7 +55,7 @@ class PeopleController extends AuthController
         ]);
 
         $pagination = $provider->getPagination();
-        $count = $provider->getCount();
+        //$count = $provider->getCount();
         $paginationParam = [];
         if($pagination){
             $paginationParam['currentPage'] = $pagination->page;
@@ -67,7 +67,7 @@ class PeopleController extends AuthController
             $paginationParam['currentPage'] = 0;
             $paginationParam['perPage'] = 10;
             $paginationParam['totalPages'] = 0;
-            $paginationParam['totalItens'] = $count;
+            $paginationParam['totalItens'] = $provider->getCount();
         }
 
         $models = $provider->getModels();
