@@ -165,7 +165,8 @@ class PeopleController extends AuthController
         if(count($queryCondition) > 0){
             $query->where($queryCondition);
         }
-
+        //@TODO CORRIGIR POSTERIORMENTE O METODO DE FIND E AS CONDIÇÕES..TEMPORARIAMENTE DESABILITADOS
+        $query = People::find();
         $peoples = $query
                     ->orderBy('name')
                     ->all();
