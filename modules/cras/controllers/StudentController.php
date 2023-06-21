@@ -79,13 +79,6 @@ class StudentController extends BaseController
         $request = Yii::$app->request->post();
         $data = [];
 
-        if($request['stage'] !== ''){
-          $data['stage'] = $request['stage'];
-        }
-
-        if($request['type'] !== ''){
-          $data['type'] = $request['type'];
-        }
 
         if(isset($request['year']) && $request['year'] !== ''){
           $data['classroomSchoolYear'] = "{$request['year']}";
